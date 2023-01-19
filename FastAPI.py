@@ -1,30 +1,16 @@
+from fastapi import FastAPI
 from transformers import AutoModelForQuestionAnswering, AutoTokenizer, pipeline
 
+app = FastAPI()
 model_name = "AndrewChar/model-QA-5-epoch-RU"
 
-# Получение предсказаний
-# pipeline вопрос-ответ
-nlp = pipeline('question-answering', model=model_name, tokenizer=model_name) # nlp - переменная для хранения созданного конвейера
-
-# Загрузка модели и токенайзера
-model = AutoModelForQuestionAnswering.from_pretrained(model_name, from_tf=True)
-
-from fastapi import FastAPI, Request, Response, status
-from fastapi.responses import JSONResponse
-import uvicorn
-
-app = FastAPI()
-
-
-@app.post("/qa")
-async def question_answering(request: Request):
-    data = await request.json()
-
-    question = data["question"]
-    context = data["context"]
-
-    res = nlp({'question': question, 'context': context})
-
-    return JSONResponse(content={"answer": res.get("answer")}, status_code=status.HTTP_200_OK)
-
-
+@app.get("/predict")
+def predict():
+    """Анализ текста по контексту в формате вопрос-ответ"""
+    nlp = pipeline('question-answering', model=model_name, tokenizer=model_name)
+    QA_input = {
+        'question': 'Что такое API?',
+        'context': 'API — описание способов взаимодействия одной компьютерной программы с другими.'
+    }
+    res = nlp(QA_input)
+    return {"answer": res.get('answer')}
