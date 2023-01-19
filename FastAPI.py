@@ -27,5 +27,4 @@ async def question_answering(request: Request):
 
     return JSONResponse(content={"answer": res.get("answer")}, status_code=status.HTTP_200_OK)
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+
