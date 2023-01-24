@@ -13,5 +13,5 @@ def test_read_main():
     json_data = response.json() 
                           
     assert response.status_code == 200
-    assert response_json['answer'] == 'описание способов взаимодействия одной компьютерной программы'
+    assert json_data['answer'] == 'описание способов взаимодействия одной компьютерной программы'
     
