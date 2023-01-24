@@ -6,7 +6,7 @@ client = TestClient(app)
 
 def test_read_main():
     response = client.get("/")
-    assert response.json() == { "context": "API — описание способов взаимодействия одной компьютерной программы с другими.",
+    assert res.get() == { "context": "API — описание способов взаимодействия одной компьютерной программы с другими.",
     "question": "Что такое API?"
 }
 
