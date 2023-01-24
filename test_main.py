@@ -4,11 +4,17 @@ from main import app
 
 client = TestClient(app)
 
+def test_read_main():
+    response = client.get("/")
+    assert response.status_code == 200
+    assert response.json() == { "context": "API — описание способов взаимодействия одной компьютерной программы с другими.",
+    "question": "Что такое API?"
+}
+
 def test_question_answering():
     response = client.post("/predict/",
-        json= {
-    "question": "Что такое API?",
-    "context": "API — описание способов взаимодействия одной компьютерной программы с другими."
+        json= { "context": "API — описание способов взаимодействия одной компьютерной программы с другими.",
+    "question": "Что такое API?"
 }
     )
     json_data = response.json() 
