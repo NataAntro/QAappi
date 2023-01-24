@@ -6,9 +6,10 @@ client = TestClient(app)
 
 def test_read_main():
     response = client.get("/predict/",
-        json= { "context": "API — описание способов взаимодействия одной компьютерной программы с другими.",
-    "question": "Что такое API?" }
-)
+    QA_input = {
+        'question': 'Что такое API?',
+        'context': 'API — описание способов взаимодействия одной компьютерной программы с другими.'
+    }
     json_data = response.json() 
                           
     assert response.status_code == 200
