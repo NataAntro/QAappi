@@ -15,16 +15,3 @@ def test_question_answering():
     assert "answer" in response_json
     assert response_json["answer"] == "описание способов взаимодействия одной компьютерной программы"
     
-def test_example():
-    model_name = "AndrewChar/model-QA-5-epoch-RU"
-    nlp = pipeline('question-answering', model=model_name, tokenizer=model_name)
-    QA_input = {
-    'question': 'Что такое API?',
-    'context': 'API — описание способов взаимодействия одной компьютерной программы с другими.'
-}
-res = nlp(QA_input)
-response = client.post("/predict/", json={"answer": res.get('answer')})
-assert response.status_code == 200
-response_json = response.json()
-assert "answer" in response_json
-assert response_json["answer"] == 'описание способов взаимодействия одной компьютерной программы'
