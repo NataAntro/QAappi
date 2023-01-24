@@ -23,6 +23,6 @@ def test_example():
 }
     res = nlp(QA_input)
     response = client.post("/predict/", json={"answer": res.get('answer')})
-    assert response.json() == {"answer": res.get('answer')}
+    assert response.json() == {"answer": 'описание способов взаимодействия одной компьютерной программы'}
    
     
