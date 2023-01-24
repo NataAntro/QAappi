@@ -1,6 +1,7 @@
 from transformers import AutoModelForQuestionAnswering, AutoTokenizer, pipeline
 from fastapi.testclient import TestClient
-from FastAPI import app
+from fastapi import FastAPI
+from fastapi import app
 
 client = TestClient(app)
 
