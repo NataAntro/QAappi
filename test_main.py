@@ -5,7 +5,7 @@ from main import app
 client = TestClient(app)
 
 def test_read_main():
-    response = client.get("/predict/",
+    response = client.get("/predict/")
     QA_input = {
         'question': 'Что такое API?',
         'context': 'API — описание способов взаимодействия одной компьютерной программы с другими.'
