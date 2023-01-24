@@ -4,7 +4,7 @@ from main import app
 
 client = TestClient(app)
 
-def test_question_answering(model_name: str, question: str, context: str):
+def test_question_answering():
     # Инициализация конвейера вопрос-ответ
     nlp = pipeline('question-answering', model=model_name, tokenizer=model_name)
     # Задание входных данных для конвейера
