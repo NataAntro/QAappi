@@ -6,8 +6,8 @@ client = TestClient(app)
 
 def test_question_answering():
     response = client.post("/predict/",
-    json={"context": "API — описание способов взаимодействия одной компьютерной программы с другими."}
-    json={"question": "Что такое API?"}
+        json={"context": "API — описание способов взаимодействия одной компьютерной программы с другими."}
+        json={"question": "Что такое API?"}
     )
     json_data = response.json() 
 
