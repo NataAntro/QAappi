@@ -8,6 +8,14 @@ st.set_page_config(page_title="My QA App", page_icon=":guardsman:", layout="wide
 # Имя и инициализация модели 
 model_name = "AndrewChar/model-QA-5-epoch-RU"
 nlp = pipeline('question-answering', model=model_name, tokenizer=model_name)
+QA_input = {
+    'question': 'Что такое API?',
+    'context': 'API — описание способов взаимодействия одной компьютерной программы с другими.'
+}
+res = nlp(QA_input) # res - переменная для хранения результата ответа
+
+# Загрузка модели и токенайзера
+model = AutoModelForQuestionAnswering.from_pretrained(model_name, from_tf=True)
 
 # Текст и вопрос для анализа
 context = st.text_area("Вставить анализируемый текст:")
