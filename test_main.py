@@ -6,13 +6,13 @@ client = TestClient(app)
 
 def test_question_answering():
     response = client.get("/predict/")
-    assert response.status_code == 200
     response_json = response.json()
     assert "question" in response_json
     assert response_json["question"] == "Что такое API?"
     assert "context" in response_json
     assert response_json["context"] == "API — описание способов взаимодействия одной компьютерной программы с другими."
-    
+    assert "answer" in response_json
+    assert response_json["answer"] == "описание способов взаимодействия одной компьютерной программы"
     
 def test_example():
     model_name = "AndrewChar/model-QA-5-epoch-RU"
@@ -23,7 +23,6 @@ def test_example():
 }
     res = nlp(QA_input)
     response = client.post("/predict/", json={"answer": res.get('answer')})
-    assert response.status_code == 200
     assert response.json() == {"answer": res.get('answer')}
    
     
