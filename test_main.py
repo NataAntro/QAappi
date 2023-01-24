@@ -13,5 +13,5 @@ def test_question_answering():
     assert "context" in response_json
     assert response_json["context"] == "API — описание способов взаимодействия одной компьютерной программы с другими."
     assert "answer" in response_json
-    assert response_json["answer"] == "описание способов взаимодействия одной компьютерной программы"
+    assert response_json['answer'] == 'описание способов взаимодействия одной компьютерной программы'
     
