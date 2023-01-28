@@ -8,7 +8,7 @@
 	
 ## :computer: В приложении используется модель [AndrewChar/model-QA-5-epoch-RU](https://huggingface.co/AndrewChar/model-QA-5-epoch-RU/)
  </div> <img src = 'https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/python2.png' height='30'/> 
-  [Google Colab](https://colab.research.google.com/drive/15qleHtSmTBILSMDiKEOA_s455rMXxcB_?usp=sharing)
+  [Google Colab](https://colab.research.google.com/drive/15qleHtSmTBILSMDiKEOA_s455rMXxcB_?usp=sharing/)
 
  ```python
  class WhoAmI:
