@@ -4,9 +4,10 @@
 
 <img src = 'https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/matrix.gif' alt = 'Awesome Matrix Code' align='right'/>
 
-<div style="text-align: right"> ...и является заданием по дисциплине программная инженерия магистратуры "Инженерия машинного обучения". </div> <img src = 'https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/python2.png' height='30'/> 
+<div style="text-align: right"> ...и является заданием по дисциплине программная инженерия магистратуры "Инженерия машинного обучения". 
 
 ## :computer: В приложении используется модель [AndrewChar/model-QA-5-epoch-RU](https://huggingface.co/AndrewChar/model-QA-5-epoch-RU/)
+	Реализация описана также в [GoogleColab](https://colab.research.google.com/drive/15qleHtSmTBILSMDiKEOA_s455rMXxcB_?usp=sharing) </div> <img src = 'https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/python2.png' height='30'/> 
 
  ```python
  class WhoAmI:
