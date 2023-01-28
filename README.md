@@ -6,7 +6,8 @@
 
 <div style="text-align: right"> ...и является заданием по дисциплине программная инженерия магистратуры "Инженерия машинного обучения". 
 	
-<div style="text-align: right"> Реализация описана также в [GoogleColab](https://colab.research.google.com/drive/15qleHtSmTBILSMDiKEOA_s455rMXxcB_?usp=sharing/)
+<div style="text-align: right"> [Google Colab](https://colab.research.google.com/drive/15qleHtSmTBILSMDiKEOA_s455rMXxcB_?usp=sharing/)
+
 	
 ## :computer: В приложении используется модель [AndrewChar/model-QA-5-epoch-RU](https://huggingface.co/AndrewChar/model-QA-5-epoch-RU/)
  </div> <img src = 'https://github.com/MarikIshtar007/MarikIshtar007/blob/master/images/python2.png' height='30'/> 
