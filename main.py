@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from transformers import AutoModelForQuestionAnswering, AutoTokenizer, pipeline
+from transformers import pipeline
 
 app = FastAPI()
 model_name = "AndrewChar/model-QA-5-epoch-RU"
